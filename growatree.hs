@@ -40,5 +40,4 @@ insertValue x (Node y leftSide rightSide) = -- input tree with multiple nodes
 
 convertTree :: Tree -> [Int]
 convertTree Leaf = []
-convertTree (Node x Leaf Leaf) = [x]
 convertTree (Node x leftSide rightSide) = x:((convertTree leftSide) ++ (convertTree rightSide))
